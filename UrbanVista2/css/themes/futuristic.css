@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(135deg, #6a1b9a, #283593);
+    color: #00e676;
+    font-family: "Orbitron", sans-serif;
+}
+header {
+    background: #4527a0;
+    color: #00e5ff;
+}

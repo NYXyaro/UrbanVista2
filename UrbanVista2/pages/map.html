@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollution Map</title>
+    <link rel="stylesheet" href="../css/pages/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+</head>
+<body>
+    <main>
+        <section class="map-container">
+            <h2>Pollution Map</h2>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button onclick="filterMarkers('Air')">Air Pollution</button>
+                <button onclick="filterMarkers('Water')">Water Pollution</button>
+                <button onclick="filterMarkers('Underground Water')">Underground Water Pollution</button>
+                <button onclick="filterMarkers('All')">Show All</button>
+            </div>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- MarkerCluster JS -->
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <!-- Your custom JS for map interactivity -->
+    <script src="../js/map.js"></script>
+</body>
+</html>

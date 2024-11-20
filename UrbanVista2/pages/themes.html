@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanVista2 - Themes</title>
+    <link rel="stylesheet" href="../css/pages/themes.css">
+</head>
+<body>
+    <header>
+        <h1>UrbanVista2 Themes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Select Your Theme</h2>
+            <div class="theme-buttons">
+                <button onclick="switchTheme('dark-theme')">Dark Theme</button>
+                <button onclick="switchTheme('light-theme')">Light Theme</button>
+                <button onclick="switchTheme('futuristic')">Futuristic Theme</button>
+            </div>
+        </section>
+
+        <section class="preview">
+            <h2>Theme Previews</h2>
+            <div class="preview-grid">
+                <div class="preview-box dark">
+                    <h3>Dark Theme</h3>
+                </div>
+                <div class="preview-box light">
+                    <h3>Light Theme</h3>
+                </div>
+                <div class="preview-box futuristic">
+                    <h3>Futuristic Theme</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/theme-switcher.js"></script>
+</body>
+</html>
