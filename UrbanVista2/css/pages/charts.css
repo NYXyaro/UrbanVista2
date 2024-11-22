@@ -1,7 +1,7 @@
 /* General Chart Section */
 .chart-section {
     padding: 20px;
-    margin: 20px auto;
+    margin: 1000px auto;
     max-width: 900px; /* Updated to allow the chart to use more space */
     background-color: rgba(255, 255, 255, 0.05); /* Transparent overlay */
     border-radius: 10px;
@@ -20,7 +20,7 @@
 
 /* Chart Canvas Styling */
 canvas {
-    width: 100%; /* Let the canvas stretch to fit the container */
+    width: 200%; /* Let the canvas stretch to fit the container */
     height: 400px; /* Set a consistent height for the chart */
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1); /* Light overlay */
