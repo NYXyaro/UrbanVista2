@@ -1,0 +1,99 @@
+/* General Page Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* About Content Section */
+.about-content {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.05); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 1.5rem;
+    color: #00ffff; /* Futuristic aqua */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+    color: #c7c7c7;
+    font-size: 1.1rem;
+}
+
+/* Themed Adjustments */
+body.dark-theme .about-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .about-content {
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .about-content p,
+body.light-theme .about-content ul li {
+    color: #333333;
+}
+
+body.futuristic .about-content {
+    background: linear-gradient(135deg, #8e24aa, #5e35b1);
+    box-shadow: 0 6px 15px rgba(0, 229, 118, 0.4);
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .about-content p,
+    .about-content ul li {
+        font-size: 1rem;
+    }
+}

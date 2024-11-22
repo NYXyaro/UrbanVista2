@@ -1,0 +1,80 @@
+/* General Chart Section */
+.chart-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px; /* Updated to allow the chart to use more space */
+    background-color: rgba(255, 255, 255, 0.05); /* Transparent overlay */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Title for the Chart Section */
+.chart-section h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00ffff; /* Futuristic aqua color */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Chart Canvas Styling */
+canvas {
+    width: 100%; /* Let the canvas stretch to fit the container */
+    height: 400px; /* Set a consistent height for the chart */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Light overlay */
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart Legends */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Legend Items */
+.chart-legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+/* Theme-Based Adjustments */
+body.dark-theme .chart-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .chart-section {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.futuristic .chart-section {
+    background: linear-gradient(135deg, #6a1b9a, #283593);
+    box-shadow: 0 6px 15px rgba(0, 229, 118, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chart-section {
+        padding: 15px;
+        max-width: 100%; /* Make it use full width on smaller screens */
+    }
+
+    .chart-section h3 {
+        font-size: 1.5rem;
+    }
+
+    canvas {
+        height: 300px; /* Adjust chart height for smaller screens */
+    }
+}

@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UrbanVista2 - Dashboard</title>
-    <link id="theme-style" rel="stylesheet" href="css/themes/dark-theme.css">
-    <link rel="stylesheet" href="css/pages/dashboard.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <!-- Global and Page-Specific Styles -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link id="theme-style" rel="stylesheet" href="css/themes/dark-theme.css" />
+    <link rel="stylesheet" href="css/pages/dashboard.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="UrbanVista Logo">
-            <h1>UrbanVista2</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="pages/map.html">Map</a></li>
-                <li><a href="pages/charts.html">Charts</a></li>
-                <li><a href="pages/themes.html">Themes</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="assets/logo.png" alt="UrbanVista Logo" />
+        <h1>UrbanVista2</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="pages/map.html">Map</a></li>
+          <li><a href="pages/charts.html">Charts</a></li>
+          <li><a href="pages/themes.html">Themes</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Main Section -->
     <main>
-        <section class="intro">
-            <h2>Welcome to UrbanVista2</h2>
-            <p>Revolutionizing urban planning with AI and futuristic tools.</p>
-        </section>
+      <!-- Introduction Section -->
+      <section class="intro">
+        <h2>Welcome to UrbanVista2</h2>
+        <p>Revolutionizing urban planning with AI and futuristic tools.</p>
+      </section>
 
-        <section class="theme-switcher">
-            <h3>Choose a Theme</h3>
-            <div class="buttons">
-                <button onclick="switchTheme('dark-theme')">Dark Theme</button>
-                <button onclick="switchTheme('light-theme')">Light Theme</button>
-                <button onclick="switchTheme('futuristic')">Futuristic Theme</button>
-            </div>
-        </section>
+      <!-- Theme Switcher Section -->
+      <section class="theme-switcher">
+        <h3>Choose a Theme</h3>
+        <div class="buttons">
+          <button data-theme="dark-theme">Dark Theme</button>
+          <button data-theme="light-theme">Light Theme</button>
+          <button data-theme="futuristic">Futuristic Theme</button>
+        </div>
+      </section>
 
-        <section class="chart-section">
-            <h3>Pollution Overview</h3>
-            <canvas id="pollutionChart"></canvas>
-        </section>
+      <!-- Chart Section -->
+      <section class="chart-section">
+        <h3>Pollution Overview</h3>
+        <canvas id="pollutionChart"></canvas>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 UrbanVista2. All rights reserved.</p>
+      <p>© 2024 UrbanVista2. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/theme-switcher.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/charts.js"></script>
-</body>
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/charts.js" defer></script>
+    <script src="js/animations.js" defer></script>
+  </body>
 </html>

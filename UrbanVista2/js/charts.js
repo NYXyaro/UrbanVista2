@@ -1,41 +1,53 @@
-// charts.js
-
-// Pollution Chart instance (global for updates)
+// Global Pollution Chart instance
 let pollutionChart;
 
-// Function to initialize the chart
+// Function to initialize or update the chart
 function initChart(data) {
-    const ctx = document.getElementById("pollutionChart").getContext("2d");
+    const chartCanvas = document.getElementById("pollutionChart");
+    const ctx = chartCanvas.getContext("2d");
 
-    // Destroy the chart if it already exists to avoid duplication
+    // Clear canvas dimensions to prevent infinite growth
+    chartCanvas.width = chartCanvas.width;
+
+    // Destroy the chart if it already exists
     if (pollutionChart) {
         pollutionChart.destroy();
     }
 
-    // Create the chart with the provided data
+    // Create a new Line Chart
     pollutionChart = new Chart(ctx, {
-        type: "bar",
+        type: "line", // Changed to line graph
         data: {
-            labels: data.labels,
+            labels: data.labels, // X-axis labels
             datasets: [
                 {
                     label: "Pollution Levels (%)",
-                    data: data.values,
-                    backgroundColor: data.colors,
-                    borderColor: data.borders,
-                    borderWidth: 1,
+                    data: data.values, // Data points
+                    borderColor: "#1e90ff", // Line color
+                    backgroundColor: "rgba(30, 144, 255, 0.2)", // Fill under the line
+                    pointBackgroundColor: "#ff4b5c", // Point color
+                    pointBorderColor: "#ffffff", // Border color of points
+                    pointHoverBackgroundColor: "#ff4b5c",
+                    pointHoverBorderColor: "#ffffff",
+                    fill: true, // Fill the area under the line
+                    tension: 0.4, // Smoothness of the curve
                 },
             ],
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             plugins: {
                 legend: {
                     position: "top",
                     labels: {
                         color: "#dcdcdc",
                         font: { family: "Orbitron", size: 14 },
+                    },
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `${context.raw}% Pollution`,
                     },
                 },
             },
@@ -54,26 +66,28 @@ function initChart(data) {
     });
 }
 
-// Example function to fetch and format chart data
-function getChartData(filterType) {
-    const filteredData = pollutionData.filter(
-        (data) => filterType === "All" || data.type === filterType
-    );
+// Example dataset
+const pollutionData = [
+    { type: "January", value: 60 },
+    { type: "February", value: 55 },
+    { type: "March", value: 50 },
+    { type: "April", value: 65 },
+    { type: "May", value: 70 },
+    { type: "June", value: 80 },
+    { type: "July", value: 75 },
+    { type: "August", value: 85 },
+];
 
+// Function to format data for the chart
+function getChartData() {
     return {
-        labels: filteredData.map((item) => item.type),
-        values: filteredData.map((item) => {
-            if (item.type === "Air") return 65;
-            if (item.type === "Water") return 45;
-            return 20; // Underground Water
-        }),
-        colors: ["#ff4b5c", "#1e90ff", "#28a745"],
-        borders: ["#ff2b4d", "#187bcd", "#1c8b36"],
+        labels: pollutionData.map((item) => item.type), // Months
+        values: pollutionData.map((item) => item.value), // Pollution values
     };
 }
 
-// Initialize with "All" data on page load
+// Initialize chart with data on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const initialData = getChartData("All");
+    const initialData = getChartData();
     initChart(initialData);
 });

@@ -1,0 +1,115 @@
+/* Global Defaults */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-theme, footer.dark-theme {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+button.dark-theme {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+
+button.dark-theme:hover {
+    background-color: #444444;
+}
+
+.card.dark-theme {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+header.light-theme, footer.light-theme {
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+button.light-theme {
+    background-color: #dddddd;
+    color: #000000;
+}
+
+button.light-theme:hover {
+    background-color: #cccccc;
+}
+
+.card.light-theme {
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* Futuristic Theme */
+body.futuristic {
+    background: linear-gradient(135deg, #6a1b9a, #283593);
+    color: #00e676;
+}
+
+header.futuristic, footer.futuristic {
+    background-color: #4527a0;
+    color: #00e5ff;
+}
+
+button.futuristic {
+    background: linear-gradient(135deg, #ff4081, #651fff);
+    color: #ffffff;
+}
+
+button.futuristic:hover {
+    background: linear-gradient(135deg, #651fff, #ff4081);
+}
+
+.card.futuristic {
+    background: linear-gradient(135deg, #8e24aa, #5e35b1);
+    color: #ffffff;
+    border: 1px solid #00e5ff;
+}
