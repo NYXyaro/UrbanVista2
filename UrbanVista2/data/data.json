@@ -1,0 +1,82 @@
+{
+    "pollutionLevels": [
+        {
+            "month": "January",
+            "airPollution": 60,
+            "waterPollution": 45,
+            "undergroundWaterPollution": 20
+        },
+        {
+            "month": "February",
+            "airPollution": 55,
+            "waterPollution": 50,
+            "undergroundWaterPollution": 25
+        },
+        {
+            "month": "March",
+            "airPollution": 50,
+            "waterPollution": 40,
+            "undergroundWaterPollution": 30
+        },
+        {
+            "month": "April",
+            "airPollution": 65,
+            "waterPollution": 55,
+            "undergroundWaterPollution": 35
+        },
+        {
+            "month": "May",
+            "airPollution": 70,
+            "waterPollution": 60,
+            "undergroundWaterPollution": 40
+        },
+        {
+            "month": "June",
+            "airPollution": 80,
+            "waterPollution": 65,
+            "undergroundWaterPollution": 45
+        },
+        {
+            "month": "July",
+            "airPollution": 75,
+            "waterPollution": 70,
+            "undergroundWaterPollution": 50
+        },
+        {
+            "month": "August",
+            "airPollution": 85,
+            "waterPollution": 75,
+            "undergroundWaterPollution": 55
+        }
+    ],
+    "mapMarkers": [
+        {
+            "id": 1,
+            "location": [51.505, -0.09],
+            "type": "Air",
+            "level": "High",
+            "details": "Industrial emissions"
+        },
+        {
+            "id": 2,
+            "location": [51.51, -0.1],
+            "type": "Water",
+            "level": "Moderate",
+            "details": "River contamination"
+        },
+        {
+            "id": 3,
+            "location": [51.52, -0.12],
+            "type": "Underground Water",
+            "level": "Low",
+            "details": "Minimal leakage"
+        },
+        {
+            "id": 4,
+            "location": [51.50, -0.11],
+            "type": "Air",
+            "level": "Moderate",
+            "details": "Vehicle pollution"
+        }
+    ]
+}
